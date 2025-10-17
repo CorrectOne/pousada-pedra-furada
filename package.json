@@ -4,12 +4,12 @@
   "description": "Pousada Pedra Furada - Sistema de Gestão de Tarefas  Aplicação web SPA desenvolvida em **Next.js**, com foco em **CI/CD**, **TDD** e **boas  práticas de versionamento**.  ##   Tecnologias - Next.js 15+ - Node.js 20+ - Prisma ORM - MySQL (ou PostgreSQL) - Jest + React Testing Library - Docker (ambiente padronizado)  ##   Estrutura do Projeto - `src/pages/api` → rotas da API RESTful - `src/components` → componentes reutilizáveis - `src/tests` → testes automatizados - `prisma/` → schema e migrations do banco de dados  ##   Instalação  ```bash  git clone https://github.com/seuusuario/pousada-pedra-furada.git  cd pousada-pedra-furada  npm install  npm run dev",
   "main": "next.config.js",
   "scripts": {
-
-    "dev": "next dev", 
-    "build": "next build", 
-    "start": "next start", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest"
   },
+  
   "keywords": [],
   "author": "Fernando Correto",
   "license": "MIT",
@@ -22,9 +22,13 @@
   },
   "homepage": "https://github.com/CorrectOne/pousada-pedra-furada#readme",
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.2.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0"
- }
+  }
 }
-
