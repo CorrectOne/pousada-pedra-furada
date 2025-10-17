@@ -1,5 +1,4 @@
-require("@testing-library/jest-dom"); 
-
+require("@testing-library/jest-dom");
 /** @type {import('jest').Config} */ 
 const config = { 
 testEnvironment: "jsdom", 
