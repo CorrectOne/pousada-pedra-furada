@@ -1,0 +1,20 @@
+{
+  "name": "pedra-furada",
+  "version": "1.0.0",
+  "description": "Pousada Pedra Furada - Sistema de Gestão de Tarefas  Aplicação web SPA desenvolvida em **Next.js**, com foco em **CI/CD**, **TDD** e **boas  práticas de versionamento**.  ##   Tecnologias - Next.js 15+ - Node.js 20+ - Prisma ORM - MySQL (ou PostgreSQL) - Jest + React Testing Library - Docker (ambiente padronizado)  ##   Estrutura do Projeto - `src/pages/api` → rotas da API RESTful - `src/components` → componentes reutilizáveis - `src/tests` → testes automatizados - `prisma/` → schema e migrations do banco de dados  ##   Instalação  ```bash  git clone https://github.com/seuusuario/pousada-pedra-furada.git  cd pousada-pedra-furada  npm install  npm run dev",
+  "main": "next.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Fernando Correto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorrectOne/pousada-pedra-furada.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CorrectOne/pousada-pedra-furada/issues"
+  },
+  "homepage": "https://github.com/CorrectOne/pousada-pedra-furada#readme"
+}
