@@ -1,30 +1,25 @@
-//import "@testing-library/jest-dom"; 
-// jest.setup.js 
-require("@testing-library/jest-dom"); 
-//Silencia o warning do React sobre JSX transform antigo 
-const originalWarn = console.warn; 
-console.warn = (...args) => { 
- if ( 
- typeof args[0] === "string" && 
- args[0].includes("using an outdated JSX transform") 
- ) { 
- return; 
- } 
- originalWarn(...args); 
-}; 
+// Habilita as matchers do Testing Library (como toBeInTheDocument)
+import "@testing-library/jest-dom";
 
-/** @type {import('jest').Config} */ 
-const config = { 
-testEnvironment: "jsdom", 
-setupFilesAfterEnv: ["<rootDir>/jest.setup.js"], 
-moduleNameMapper: { 
-// ignora importações de CSS, imagens etc. durante o teste 
-"\\.(css|less|scss|sass)$": "identity-obj-proxy", 
-"\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/__mocks__/fileMock.js", 
-}, 
-testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"], 
-transform: { 
-"^.+\\.(js|jsx|ts|tsx)$": "babel-jest", 
-}, 
-}; 
-module.exports = config; 
+// Silencia o aviso do React sobre JSX antigo
+const originalWarn = console.warn;
+console.warn = (...args) => {
+  if (
+    typeof args[0] === "string" &&
+    args[0].includes("using an outdated JSX transform")
+  ) {
+    return;
+  }
+  originalWarn(...args);
+};
+
+// Adiciona suporte global a TextEncoder/TextDecoder (necessário pro React Router)
+import { TextEncoder, TextDecoder } from "util";
+
+if (typeof global.TextEncoder === "undefined") {
+  global.TextEncoder = TextEncoder;
+}
+
+if (typeof global.TextDecoder === "undefined") {
+  global.TextDecoder = TextDecoder;
+}
