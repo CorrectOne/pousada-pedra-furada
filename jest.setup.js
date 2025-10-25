@@ -14,12 +14,6 @@ console.warn = (...args) => {
 };
 
 // Adiciona suporte global a TextEncoder/TextDecoder (necessário pro React Router)
-import { TextEncoder, TextDecoder } from "util";
-
-if (typeof global.TextEncoder === "undefined") {
-  global.TextEncoder = TextEncoder;
-}
-
-if (typeof global.TextDecoder === "undefined") {
-  global.TextDecoder = TextDecoder;
-}
+import { TextEncoder, TextDecoder } from "util"; 
+if (!global.TextEncoder) global.TextEncoder = TextEncoder; 
+if (!global.TextDecoder) global.TextDecoder = TextDecoder; 
