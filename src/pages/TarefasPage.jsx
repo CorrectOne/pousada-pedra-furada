@@ -1,7 +1,9 @@
+// src/pages/TarefasPage.jsx 
 import React, { useState } from "react"; 
 export default function TarefasPage() { 
  const [tarefas, setTarefas] = useState([ 
  { id: 1, nome: "Arrumar quarto 101", status: "Atribuída" }, 
+ { id: 2, nome: "Lavar pátio", status: "Concluída" }, 
  ]); 
  const atualizarStatus = (id) => { 
  setTarefas((prev) => 
@@ -33,4 +35,4 @@ export default function TarefasPage() {
  </ul> 
  </section> 
  ); 
-} 
+}
