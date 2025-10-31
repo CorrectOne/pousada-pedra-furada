@@ -1,3 +1,4 @@
+// src/pages/RelatoriosPage.jsx 
 import React from "react"; 
 export default function RelatoriosPage() { 
  const estatisticas = { 
@@ -17,4 +18,4 @@ export default function RelatoriosPage() {
  </ul> 
  </section> 
  ); 
-} 
+}
